@@ -5,3 +5,9 @@ steps:
   args: ['test']
   env: 
     - 'PROJECT_ROOT=/go/src/app'
+
+- id: 'Build project'
+  name: 'gcr.io/cloud-builders/go'
+  args: ['build', 'app.go']
+  env: 
+    - 'PROJECT_ROOT=/go/src/app'
