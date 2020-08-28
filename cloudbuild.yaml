@@ -12,7 +12,7 @@ steps:
   env: 
     - 'PROJECT_ROOT=/go/src/app'
 
-- id: 'Build project'
+- id: 'Build image'
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/fullcycle-go-ci', '.']
 
