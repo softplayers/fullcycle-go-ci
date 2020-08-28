@@ -12,6 +12,12 @@ steps:
   env: 
     - 'GOPATH=.'
 
+- id: 'Run project'
+  name: 'gcr.io/cloud-builders/go'
+  args: ['run', 'sum']
+  env: 
+    - 'GOPATH=.'
+
 - id: 'Build image'
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/fullcycle-go-ci', '.']
