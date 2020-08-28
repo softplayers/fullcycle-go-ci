@@ -3,14 +3,14 @@ steps:
 - id: 'Exec unit tests'
   name: 'gcr.io/cloud-builders/go'
   args: ['test']
-  #env: 
-  #  - 'GOPATH=/go/src/app'
+  env: 
+    - 'GOPATH=.'
 
 - id: 'Build project'
   name: 'gcr.io/cloud-builders/go'
   args: ['build', 'app.go']
-  #env: 
-  #  - 'PROJECT_ROOT=/go/src/app'
+  env: 
+    - 'GOPATH=.'
 
 - id: 'Build image'
   name: 'gcr.io/cloud-builders/docker'
