@@ -1,0 +1,5 @@
+steps:
+
+- id: 'Exec unit tests'
+  name: 'gcr.io/$PROJECT_ID/fullcycle-go-ci'
+  args: ['go', 'test']
