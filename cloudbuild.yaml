@@ -3,3 +3,5 @@ steps:
 - id: 'Exec unit tests'
   name: 'gcr.io/cloud-builders/go'
   args: ['test']
+  env: 
+    - 'PROJECT_ROOT=.'
